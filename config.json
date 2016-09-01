@@ -40,6 +40,6 @@
 						"default_commands": [	
 							"echo magic123 | sudo -S service opensafd start"
 						]
-					},
+					}
 				]
 }
