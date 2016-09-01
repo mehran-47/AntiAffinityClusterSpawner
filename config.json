@@ -1,0 +1,45 @@
+{
+	"floating_ip_pool":["192.168.205.132", "192.168.205.133", "192.168.205.134", "192.168.205.135"],
+	"anti_affinity_groups":["testAntiAffinityServerGrp_0"],
+	"vm_configs": [
+					{
+						"hostname": "vm1",
+						"openStackVMname":"AF_VM_1",
+						"groupname":"testAntiAffinityServerGrp_0",
+						"source_snapshot":"AntiAffinityVMsnapshot_1",
+						"username":"node1",
+						"password":"magic123",
+						"flavor":"2",
+						"slot_id": "1",
+						"default_commands": [	
+							"echo magic123 | sudo -S service opensafd start"
+						]
+					},
+					{
+						"hostname": "vm2",
+						"openStackVMname":"AF_VM_2",
+						"groupname":"testAntiAffinityServerGrp_0",
+						"source_snapshot":"AntiAffinityVMsnapshot_1",
+						"username":"node1",
+						"password":"magic123",
+						"flavor":"2",
+						"slot_id": "2",
+						"default_commands": [	
+							"echo magic123 | sudo -S service opensafd start"
+						]
+					},
+					{
+						"hostname": "vm3",
+						"openStackVMname":"AF_VM_3",
+						"groupname":"testAntiAffinityServerGrp_0",
+						"source_snapshot":"AntiAffinityVMsnapshot_1",
+						"username":"node1",
+						"password":"magic123",
+						"flavor":"2",
+						"slot_id": "3",
+						"default_commands": [	
+							"echo magic123 | sudo -S service opensafd start"
+						]
+					},
+				]
+}
