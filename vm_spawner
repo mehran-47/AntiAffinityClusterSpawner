@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+from pexpect import spawn
+from subprocess import Popen, PIPE
+from threading import Thread
+import sys, time
+
+def is_active_after_boot(vmname):
+	command = Popen(['nova','list'], stdout=PIPE)
+	outputList = [line for line in command.stdout]
+	for entry in outputList[3:-1]:
+		if entry.split('|')[2].strip()==vmname:
+			return 'ACTIVE'== entry.split('|')[3].strip()
+	return False
+
+def get_vm_names():
+	command = Popen(['nova','list'], stdout=PIPE)
+        outputList = [line for line in command.stdout]
+        return [entry.split('|')[2].strip() for entry in outputList[3:-1]]
+		
+
+def boot_with_snapshot(snapshot, vmname, affinityGroupName, flavor='2', timeout=300):
+	if vmname in get_vm_names():
+		print('VM %s already exists. Please provide unique VM name to boot.' %(vmname))
+		return
+	command = Popen(['nova','boot','--flavor',flavor,'--image', snapshot, vmname, '--hint', 'group='+affinityGroupName])
+	while timeout>0 and not is_active_after_boot(vmname):
+		time.sleep(2)
+		timeout-=3
+	if is_active_after_boot(vmname):
+		print('%s created successfully' %(vmname))
+	else:
+		print('%s is taking longer than usual (~5 minutes) to boot; consider troubleshooting. Customization of %s is halted' %(vmname, vmname))
+		
+
+if __name__=='__main__':
+	if sys.argv[2:]:
+		for i in range(int(sys.argv[1]),int(sys.argv[2])):
+			Thread(target=boot_with_snapshot, args=('AntiAffinityVMsnapshot_1', 'AF_VM_'+str(i), 'testAntiAffinityServerGrp_0')).start()
+			time.sleep(1)
