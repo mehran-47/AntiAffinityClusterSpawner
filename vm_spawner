@@ -65,13 +65,11 @@ if __name__=='__main__':
 		with open('config.json', 'r') as f:
 			mainConfig = json.loads(f.read())	
 		vms = VMSpawner(mainConfig['floating_ip_pool'])
-		#floatingIpPool = mainConfig['floating_ip_pool']
 		for anAntiAffinityGroup in mainConfig['anti_affinity_groups']:
-			#call('nova server-group-create '+anAntiAffinityGroup+' anti-affinity'.split(' '))
 			call(['nova', 'server-group-create', anAntiAffinityGroup, 'anti-affinity'])
 		for aVMConfig in mainConfig['vm_configs']:
 			with open('vm_config_'+str(mainConfig['vm_configs'].index(aVMConfig))+'.json', 'w+') as fw: fw.write(json.dumps(aVMConfig))
-			Thread(target=vms.boot_with_snapshot, args=(aVMConfig, 'vm_config_'+mainConfig.index(aVMConfig)+'.json')).start()
+			Thread(target=vms.boot_with_snapshot, args=(aVMConfig, 'vm_config_'str(mainConfig['vm_configs'].index(aVMConfig))+'.json')).start()
 			time.sleep(1)		
 
 	'''
