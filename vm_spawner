@@ -19,8 +19,8 @@ class VMSpawner():
 
 	def get_vm_names(self):
 		command = Popen(['nova','list'], stdout=PIPE)
-			outputList = [line for line in command.stdout]
-			return [entry.split('|')[2].strip() for entry in outputList[3:-1]]
+		outputList = [line for line in command.stdout]
+		return [entry.split('|')[2].strip() for entry in outputList[3:-1]]
 			
 	def boot_with_snapshot(aVMConfig, configDumpFile, timeout=300):
 		snapshot, vmname, antiAffinityGroupName, flavor, username, pw =\
