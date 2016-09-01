@@ -1,7 +1,0 @@
-{
-	"hostname": "vm4",
-	"slot_id": "4",
-	"default_commands": [	
-	"echo magic123 | sudo -S service opensafd start"
-	]
-}

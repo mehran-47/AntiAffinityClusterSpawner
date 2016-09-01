@@ -70,7 +70,7 @@ if __name__=='__main__':
 			#call('nova server-group-create '+anAntiAffinityGroup+' anti-affinity'.split(' '))
 			call(['nova', 'server-group-create', anAntiAffinityGroup, 'anti-affinity'])
 		for aVMConfig in mainConfig['vm_configs']:
-			with open('vm_config_'+mainConfig.index(aVMConfig)+'.json', 'w+') as fw: fw.write(json.dumps(aVMConfig))
+			with open('vm_config_'+str(mainConfig['vm_configs'].index(aVMConfig))+'.json', 'w+') as fw: fw.write(json.dumps(aVMConfig))
 			Thread(target=vms.boot_with_snapshot, args=(aVMConfig, 'vm_config_'+mainConfig.index(aVMConfig)+'.json')).start()
 			time.sleep(1)		
 
