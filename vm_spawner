@@ -47,6 +47,8 @@ class VMSpawner():
 			child_scp = spawn('scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '+aFile.split('/')[-1]+' '+user+'@'+ip+':'+aFile, timeout=None)
 			child_scp.expect(user+"@"+ip+"'s password:")
 			child_scp.sendline(pw)
+			for line in child_scp:
+				pass
 
 	def execute_commands_at(self, user, ip, pw, commands):
 		print('Logging in remotely...')
