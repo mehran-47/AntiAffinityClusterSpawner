@@ -37,6 +37,9 @@ class updates():
 		call('chmod +x /etc/init.d/default_startups'.split(' '))
 		call('update-rc.d default_startups defaults'.split(' '))
 
+	def prepare_for_imm_replacement(self):
+		call('mv /etc/opensaf/imm.xml /etc/opensaf/imm.xml.bkp'.split(' '))
+
 def finalize(timeout=3):
 	time.sleep(timeout)
 	call('reboot')
@@ -51,6 +54,7 @@ if __name__ == '__main__':
 			up.append_default_commands(config['default_commands'])
 			up.set_node_type(config['node_type'])
 			up.fix_dtmd()
+			up.prepare_for_imm_replacement()
 			finalize(random.random()*7)
 		else:
 			print('Config file %s not found, quitting' %(sys.argv[1]))
