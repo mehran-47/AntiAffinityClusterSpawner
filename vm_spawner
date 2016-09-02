@@ -42,7 +42,7 @@ class VMSpawner():
 			timeout-=3
 		if self.is_active_after_boot(vmname):
 			print('%s created successfully' %(vmname))
-			floatingIp = self.floatingIpPool[self.get_last_spawned_vm_index()+1]
+			floatingIp = self.floatingIpPool.pop(0)
 			call(['nova', 'add-floating-ip', vmname, floatingIp])
 			time.sleep(1)
 			self.push_updates(username, floatingIp, pw, configDumpFile)
