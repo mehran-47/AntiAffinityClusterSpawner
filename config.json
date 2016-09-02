@@ -43,6 +43,20 @@
 						"default_commands": [	
 							"echo magic123 | sudo -S service opensafd start"
 						]
+					},
+					{
+						"hostname": "node4",
+						"openStackVMname":"AF_VM_4",
+						"groupname":"testAntiAffinityServerGrp_0",
+						"source_snapshot":"AntiAffinityVMsnapshot_1",
+						"username":"node1",
+						"password":"magic123",
+						"flavor":"2",
+						"slot_id": "4",
+						"node_type":"payload",
+						"default_commands": [	
+							"echo magic123 | sudo -S service opensafd start"
+						]
 					}
 				]
 }

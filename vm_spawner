@@ -62,8 +62,12 @@ class VMSpawner():
 			pass
 			
 	def push_updates(self, user, ip, pw, configFile):
-		self.send_files(user, ip, pw, ['/home/node1/updates.py', '/home/node1/'+configFile])
-		self.execute_commands_at(user, ip, pw, ['echo '+ pw + ' | sudo -S python3 /home/node1/updates.py '+configFile])
+		self.send_files(user, ip, pw, \
+			['/home/node1/updates.py', \
+			'/home/node1/'+configFile, \
+			'/etc/opensaf/imm.xml'])
+		self.execute_commands_at(user, ip, pw, 
+			['echo '+ pw + ' | sudo -S python3 /home/node1/updates.py '+configFile])
 
 		
 if __name__=='__main__':
