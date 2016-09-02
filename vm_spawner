@@ -84,7 +84,7 @@ class VMSpawner():
 
 	def spawn_vms(self, num, lastSpawnedVMIndex, vmConfigs):
 		finalIndex = lastSpawnedVMIndex+num+1 if lastSpawnedVMIndex+num+1 <= len(vmConfigs) else len(vmConfigs)
-		for i in range(lastSpawnedVMIndex+1, finalIndex):
+		for i in range(lastSpawnedVMIndex, finalIndex):
 			with open('vm_config_'+ str(i) +'.json', 'w+') as fw: fw.write(json.dumps(vmConfigs[i], indent=4))
 			Thread(target=vms.boot_with_snapshot, args=(vmConfigs[i], 'vm_config_'+str(i)+'.json')).start()
 			time.sleep(1)
