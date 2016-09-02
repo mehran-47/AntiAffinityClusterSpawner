@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import re, sys, time, netifaces, os, json
+import re, sys, time, netifaces, os, json, random
 from subprocess import call
 
 class updates():
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 			up.set_slot_id(config['slot_id'])
 			up.append_default_commands(config['default_commands'])
 			up.fix_dtmd()
-			finalize()
+			finalize(random.random()*7)
 		else:
 			print('Config file %s not found, quitting' %(sys.argv[1]))
 	else:
