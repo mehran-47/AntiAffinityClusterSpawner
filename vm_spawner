@@ -51,7 +51,7 @@ class VMSpawner():
 		child_shell.expect(user+"@"+ip+"'s password:")
 		child_shell.sendline(pw)
 		for command in commands:
-			child.sendline(command)
+			child_shell.sendline(command)
 		for line in child:
 			pass
 			
