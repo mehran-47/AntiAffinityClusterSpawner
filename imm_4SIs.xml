@@ -6324,7 +6324,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
         <attr>
             <name>saAmfSGNumPrefAssignedSUs</name>
-            <value>2</value>
+            <value>4</value>
         </attr>
         <attr>
             <name>saAmfSGMaxActiveSIsperSU</name>
@@ -6359,7 +6359,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
         <attr>
             <name>saAmfSGNumPrefAssignedSUs</name>
-            <value>2</value>
+            <value>4</value>
         </attr>
         <attr>
             <name>saAmfSGMaxActiveSIsperSU</name>
@@ -6394,7 +6394,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
         <attr>
             <name>saAmfSGNumPrefAssignedSUs</name>
-            <value>2</value>
+            <value>4</value>
         </attr>
         <attr>
             <name>saAmfSGMaxActiveSIsperSU</name>
@@ -6429,7 +6429,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
         <attr>
             <name>saAmfSGNumPrefAssignedSUs</name>
-            <value>2</value>
+            <value>4</value>
         </attr>
         <attr>
             <name>saAmfSGMaxActiveSIsperSU</name>
@@ -6450,7 +6450,7 @@ to ensure that default global values in the implementation are also changed acco
 	    </attr>
 	    <attr>
 	      <name>saInserviceBuff</name>
-	      <value>2</value>
+	      <value>0</value>
 	    </attr>
 	    <attr>
 	      <name>saAmfSGName</name>
