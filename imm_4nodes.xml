@@ -7075,6 +7075,154 @@ to ensure that default global values in the implementation are also changed acco
         <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-2HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
     </object>
 	<!-- Node 3 (end) -->
+	<!-- Node 4 (start) -->
+    <object class="SaAmfNodeSwBundle">
+        <dn>safInstalledSwBundle=safSmfBundle=Ericsson-TSP,safAmfNode=PL-4,safAmfCluster=myAmfCluster</dn>
+        <attr>
+            <name>saAmfNodeSwBundlePathPrefix</name>
+            <value>/opt/httpComponent</value>
+        </attr>    
+    </object>
+    <object class="SaAmfSU">
+        <dn>safSu=Service_unit-3HTTP_SU,safSg=Service_group-00HTTP_server,safApp=Application-0HTTP_server</dn>
+        <attr>
+            <name>saAmfSUType</name>
+            <value>safVersion=4.0.0,safSuType=HTTP_SU_type</value>
+        </attr>
+        <attr>
+            <name>saAmfSUHostNodeOrNodeGroup</name>
+            <value>safAmfNode=PL-4,safAmfCluster=myAmfCluster</value>
+        </attr>
+        <attr>
+            <name>saAmfSURank</name>
+            <value>1</value>
+        </attr>
+    </object>
+    <object class="SaAmfComp">
+        <dn>safComp=Component-1HTTP,safSu=Service_unit-3HTTP_SU,safSg=Service_group-00HTTP_server,safApp=Application-0HTTP_server</dn>
+        <attr>
+            <name>saAmfCompType</name>
+            <value>safVersion=4.0.0,safCompType=HTTP_component_type</value>
+        </attr>
+         <attr>
+            <name>saAmfCompInstantiateCmdArgv</name>
+            <value>8080</value>
+            <value>httpCompServer-1</value>
+        </attr>
+        <attr>
+            <name>saAmfCompTerminateCmdArgv</name>
+            <value>httpCompServer-1</value>
+        </attr>
+    </object>
+    <object class="SaAmfCompCsType">
+        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-3HTTP_SU,safSg=Service_group-00HTTP_server,safApp=Application-0HTTP_server</dn>
+    </object>
+
+    <object class="SaAmfSU">
+        <dn>safSu=Service_unit-3HTTP_SU,safSg=Service_group-01HTTP_server,safApp=Application-0HTTP_server</dn>
+        <attr>
+            <name>saAmfSUType</name>
+            <value>safVersion=4.0.0,safSuType=HTTP_SU_type</value>
+        </attr>
+        <attr>
+            <name>saAmfSUHostNodeOrNodeGroup</name>
+            <value>safAmfNode=PL-4,safAmfCluster=myAmfCluster</value>
+        </attr>
+        <attr>
+            <name>saAmfSURank</name>
+            <value>1</value>
+        </attr>
+    </object>
+    <object class="SaAmfComp">
+        <dn>safComp=Component-1HTTP,safSu=Service_unit-3HTTP_SU,safSg=Service_group-01HTTP_server,safApp=Application-0HTTP_server</dn>
+        <attr>
+            <name>saAmfCompType</name>
+            <value>safVersion=4.0.0,safCompType=HTTP_component_type</value>
+        </attr>
+         <attr>
+            <name>saAmfCompInstantiateCmdArgv</name>
+            <value>8081</value>
+            <value>httpCompServer-2</value>
+        </attr>
+        <attr>
+            <name>saAmfCompTerminateCmdArgv</name>
+            <value>httpCompServer-2</value>
+        </attr>
+    </object>
+    <object class="SaAmfCompCsType">
+        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-3HTTP_SU,safSg=Service_group-01HTTP_server,safApp=Application-0HTTP_server</dn>
+    </object>
+
+    <object class="SaAmfSU">
+        <dn>safSu=Service_unit-3HTTP_SU,safSg=Service_group-02HTTP_server,safApp=Application-0HTTP_server</dn>
+        <attr>
+            <name>saAmfSUType</name>
+            <value>safVersion=4.0.0,safSuType=HTTP_SU_type</value>
+        </attr>
+        <attr>
+            <name>saAmfSUHostNodeOrNodeGroup</name>
+            <value>safAmfNode=PL-4,safAmfCluster=myAmfCluster</value>
+        </attr>
+        <attr>
+            <name>saAmfSURank</name>
+            <value>1</value>
+        </attr>
+    </object>
+    <object class="SaAmfComp">
+        <dn>safComp=Component-1HTTP,safSu=Service_unit-3HTTP_SU,safSg=Service_group-02HTTP_server,safApp=Application-0HTTP_server</dn>
+        <attr>
+            <name>saAmfCompType</name>
+            <value>safVersion=4.0.0,safCompType=HTTP_component_type</value>
+        </attr>
+         <attr>
+            <name>saAmfCompInstantiateCmdArgv</name>
+            <value>8082</value>
+            <value>httpCompServer-3</value>
+        </attr>
+        <attr>
+            <name>saAmfCompTerminateCmdArgv</name>
+            <value>httpCompServer-3</value>
+        </attr>
+    </object>
+    <object class="SaAmfCompCsType">
+        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-3HTTP_SU,safSg=Service_group-02HTTP_server,safApp=Application-0HTTP_server</dn>
+    </object>
+
+    <object class="SaAmfSU">
+        <dn>safSu=Service_unit-3HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
+        <attr>
+            <name>saAmfSUType</name>
+            <value>safVersion=4.0.0,safSuType=HTTP_SU_type</value>
+        </attr>
+        <attr>
+            <name>saAmfSUHostNodeOrNodeGroup</name>
+            <value>safAmfNode=PL-4,safAmfCluster=myAmfCluster</value>
+        </attr>
+        <attr>
+            <name>saAmfSURank</name>
+            <value>1</value>
+        </attr>
+    </object>
+    <object class="SaAmfComp">
+        <dn>safComp=Component-1HTTP,safSu=Service_unit-3HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
+        <attr>
+            <name>saAmfCompType</name>
+            <value>safVersion=4.0.0,safCompType=HTTP_component_type</value>
+        </attr>
+         <attr>
+            <name>saAmfCompInstantiateCmdArgv</name>
+            <value>8083</value>
+            <value>httpCompServer-4</value>
+        </attr>
+        <attr>
+            <name>saAmfCompTerminateCmdArgv</name>
+            <value>httpCompServer-4</value>
+        </attr>
+    </object>
+    <object class="SaAmfCompCsType">
+        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-2HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
+    </object>
+	<!-- Node 4 (end) -->
     <!-- SUs (end) -->
     <!-- ################################################ HTTP ends ################################################# -->
 </imm:IMM-contents>
