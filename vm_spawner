@@ -80,7 +80,7 @@ class VMSpawner():
 
 	def get_last_spawned_vm_index(self):
 		vmConfigFileList = [f for f in os.listdir('.') if re.match( r'vm_config_[0-9]{1}.json', f)]
-		return int(vmConfigFileList[-1].rsplit('json')[0][-2]) if vmConfigFileList[0:] else -1	
+		return int(vmConfigFileList[-1].rsplit('json')[0][-2])+1 if vmConfigFileList[0:] else -1	
 
 	def spawn_vms(self, num, lastSpawnedVMIndex, vmConfigs):
 		finalIndex = lastSpawnedVMIndex+num+1 if lastSpawnedVMIndex+num+1 <= len(vmConfigs) else len(vmConfigs)
