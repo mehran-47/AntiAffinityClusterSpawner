@@ -46,8 +46,6 @@ class VMSpawner():
 			call(['nova', 'add-floating-ip', vmname, floatingIp])
 			time.sleep(1)
 			self.push_updates(username, floatingIp, pw, configDumpFile)
-			print('Updates pushed, attempting to start ME & osaf')
-			self.execute_commands_at(username, floatingIp, pw, ['echo '+ pw + ' | sudo -S /home/node1/ME_osaf_starter.sh'])
 		else:
 			print('%s is taking longer than usual (~5 minutes) to boot; consider troubleshooting. Customization of %s is halted' %(vmname, vmname))
 
@@ -76,8 +74,8 @@ class VMSpawner():
 		self.send_files(user, ip, pw, \
 			['/home/node1/updates.py', \
 			'/home/node1/'+configFile, \
-			'/home/node1/imm_4SIs.xml', \
-			'/home/node1/ME_osaf_starter.sh'])
+			'/home/node1/imm_4SIs.xml'], \
+			'/home/node1/ME_osaf_starter.sh')
 		self.execute_commands_at(user, ip, pw, 
 			['echo '+ pw + ' | sudo -S python3 /home/node1/updates.py '+configFile])
 
