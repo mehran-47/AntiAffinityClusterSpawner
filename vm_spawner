@@ -47,7 +47,7 @@ class VMSpawner():
 			time.sleep(1)
 			self.push_updates(username, floatingIp, pw, configDumpFile)
 			print('Updates pushed, attempting to start ME & osaf')
-			self.execute_commands_at(username, floatingIp, pw, ['echo '+ pw + ' | sudo -S /home/node1/ME_osaf_starter.sh'+configFile])
+			self.execute_commands_at(username, floatingIp, pw, ['echo '+ pw + ' | sudo -S /home/node1/ME_osaf_starter.sh'])
 		else:
 			print('%s is taking longer than usual (~5 minutes) to boot; consider troubleshooting. Customization of %s is halted' %(vmname, vmname))
 
