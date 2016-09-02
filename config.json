@@ -11,6 +11,7 @@
 						"password":"magic123",
 						"flavor":"2",
 						"slot_id": "1",
+						"node_type":"controller",
 						"default_commands": [	
 							"echo magic123 | sudo -S service opensafd start"
 						]
@@ -24,6 +25,7 @@
 						"password":"magic123",
 						"flavor":"2",
 						"slot_id": "2",
+						"node_type":"controller",
 						"default_commands": [	
 							"echo magic123 | sudo -S service opensafd start"
 						]
@@ -37,6 +39,7 @@
 						"password":"magic123",
 						"flavor":"2",
 						"slot_id": "3",
+						"node_type":"payload",
 						"default_commands": [	
 							"echo magic123 | sudo -S service opensafd start"
 						]

@@ -14,6 +14,8 @@ class updates():
 		with open('/etc/hosts', 'r') as f: readlines = f.read()
 		with open('/etc/hosts.old', 'w+') as f: f.write(readlines)
 		with open('/etc/hosts', 'w') as fw: fw.write(re.sub(self.oldhostname,newhostname,readlines))
+		#for opensaf
+		with open('/etc/opensaf/node_name', 'w') as fw: fw.write(newhostname)
 
 	def set_slot_id(self, s_id):
 		with open('/etc/opensaf/slot_id', 'w') as fw: fw.write(s_id)
@@ -25,7 +27,9 @@ class updates():
 		for line in readlines: 
 			endString += regex_compiled.sub('DTM_NODE_IP='+self.ip_eth0, line) if line[-1]=='\n' else regex_compiled.sub(newhostname, line)+'\n'		
 		with open('/etc/opensaf/dtmd.conf','w') as fw: fw.write(endString)
-	
+
+	def set_node_type(self, nodetype):
+		with open('/etc/opensaf/node_type', 'w') as fw: fw.write(nodetype)
 
 	def append_default_commands(self, commandsList):
 		commandsList = ['#!/bin/bash'] + commandsList
@@ -45,6 +49,7 @@ if __name__ == '__main__':
 			up.set_hostname(config['hostname'])
 			up.set_slot_id(config['slot_id'])
 			up.append_default_commands(config['default_commands'])
+			up.set_node_type(config['node_type'])
 			up.fix_dtmd()
 			finalize(random.random()*7)
 		else:
