@@ -18,13 +18,12 @@ class VMSpawner():
 		return False
 
 	def server_group_exists(self, groupname):
-		command = Popen(['nova','list'], stdout=PIPE)
+		command = Popen(['nova','server-group-list'], stdout=PIPE)
 		outputList = [line for line in command.stdout]
 		for entry in outputList[3:-1]:
 			if entry.split('|')[2].strip()==groupname:
 				return True
 		return False
-
 
 	def get_vm_names(self):
 		command = Popen(['nova','list'], stdout=PIPE)
@@ -43,7 +42,7 @@ class VMSpawner():
 			timeout-=3
 		if self.is_active_after_boot(vmname):
 			print('%s created successfully' %(vmname))
-			floatingIp = self.floatingIpPool.pop(0)
+			floatingIp = self.floatingIpPool[self.get_last_spawned_vm_index()+1]
 			call(['nova', 'add-floating-ip', vmname, floatingIp])
 			time.sleep(1)
 			self.push_updates(username, floatingIp, pw, configDumpFile)
