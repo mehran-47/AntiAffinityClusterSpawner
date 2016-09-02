@@ -2,7 +2,7 @@
 from pexpect import spawn
 from subprocess import Popen, PIPE, call
 from threading import Thread
-import sys, time, json, os
+import sys, time, json, os, re
 
 
 class VMSpawner():
@@ -70,16 +70,31 @@ class VMSpawner():
 		self.execute_commands_at(user, ip, pw, 
 			['echo '+ pw + ' | sudo -S python3 /home/node1/updates.py '+configFile])
 
-		
+
+def get_last_spawned_vm_index():
+	vmConfigFileList = [f for f in os.listdir('.') if re.match( r'vm_config_[0-9]{1}.json', f)]
+	return int(vmConfigFileList[-1].rsplit('json')[0][-2]) if vmConfigFileList[0:] else -1	
+
+def spawn_vms(num, lastSpawnedVMIndex, vmConfigs):
+	finalIndex = lastSpawnedVMIndex+num+1 if lastSpawnedVMIndex+num+1 <= len(vmConfigs) else len(vmConfigs)
+	for i in range(lastSpawnedVMIndex+1, finalIndex):
+		with open('vm_config_'+ str(i) +'.json', 'w+') as fw: fw.write(json.dumps(vmConfigs[i], indent=4))
+		Thread(target=vms.boot_with_snapshot, args=(vmConfigs[i], 'vm_config_'+str(i)+'.json')).start()
+		time.sleep(1)
+
 if __name__=='__main__':
 	if os.path.exists(os.getcwd()+'/config.json'):
 		with open('config.json', 'r') as f:
 			mainConfig = json.loads(f.read())	
 		vms = VMSpawner(mainConfig['floating_ip_pool'])
-		for anAntiAffinityGroup in mainConfig['anti_affinity_groups']:
+		for anAntiAffinityGroup in mainConfig['anti_affinity_groups']: 
 			call(['nova', 'server-group-create', anAntiAffinityGroup, 'anti-affinity'])
+		num = int(sys.argv[1]) if sys.argv[1:] else len(mainConfig['vm_configs'])		
+		spawn_vms(num, get_last_spawned_vm_index(), mainConfig['vm_configs'])		
+		'''
 		for aVMConfig in mainConfig['vm_configs']:
 			indexVal = str(mainConfig['vm_configs'].index(aVMConfig))
 			with open('vm_config_'+indexVal+'.json', 'w+') as fw: fw.write(json.dumps(aVMConfig, indent=4))
 			Thread(target=vms.boot_with_snapshot, args=(aVMConfig, 'vm_config_'+indexVal+'.json')).start()
 			time.sleep(1)
+		'''
