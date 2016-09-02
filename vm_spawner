@@ -36,6 +36,7 @@ class VMSpawner():
 			print('%s created successfully' %(vmname))
 			floatingIp = self.floatingIpPool.pop(0)
 			call(['nova', 'add-floating-ip', vmname, floatingIp])
+			time.sleep(1)
 			self.push_updates(username, floatingIp, pw, configDumpFile)
 		else:
 			print('%s is taking longer than usual (~5 minutes) to boot; consider troubleshooting. Customization of %s is halted' %(vmname, vmname))
