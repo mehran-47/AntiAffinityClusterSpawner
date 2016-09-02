@@ -52,7 +52,7 @@ class VMSpawner():
 		child_shell.sendline(pw)
 		for command in commands:
 			child_shell.sendline(command)
-		for line in child:
+		for line in child_shell:
 			pass
 			
 	def push_updates(self, user, ip, pw, configFile):
