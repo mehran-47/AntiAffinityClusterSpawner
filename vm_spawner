@@ -82,11 +82,4 @@ if __name__=='__main__':
 			indexVal = str(mainConfig['vm_configs'].index(aVMConfig))
 			with open('vm_config_'+indexVal+'.json', 'w+') as fw: fw.write(json.dumps(aVMConfig, indent=4))
 			Thread(target=vms.boot_with_snapshot, args=(aVMConfig, 'vm_config_'+indexVal+'.json')).start()
-			time.sleep(1)		
-
-	'''
-	if sys.argv[2:]:
-		for i in range(int(sys.argv[1]),int(sys.argv[2])):
-			Thread(target=boot_with_snapshot, args=('AntiAffinityVMsnapshot_1', 'AF_VM_'+str(i), 'testAntiAffinityServerGrp_0')).start()
 			time.sleep(1)
-	'''
