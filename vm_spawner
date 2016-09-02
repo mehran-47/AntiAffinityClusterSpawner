@@ -42,12 +42,16 @@ class VMSpawner():
 
 	def send_files(self, user, ip, pw, files):
 		for aFile in files:
-			child_scp = spawn('scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '+aFile.split('/')[-1]+' '+user+'@'+ip+':'+aFile)
+			print('Sending files...')
+			print('scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '+aFile.split('/')[-1]+' '+user+'@'+ip+':'+aFile)
+			child_scp = spawn('scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '+aFile.split('/')[-1]+' '+user+'@'+ip+':'+aFile, timeout=None)
 			child_scp.expect(user+"@"+ip+"'s password:")
 			child_scp.sendline(pw)
 
 	def execute_commands_at(self, user, ip, pw, commands):
-		child_shell = spawn('ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '+user+'@'+ip)
+		print('Logging in remotely...')
+		print('ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '+user+'@'+ip)
+		child_shell = spawn('ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '+user+'@'+ip, timeout=None)
 		child_shell.expect(user+"@"+ip+"'s password:")
 		child_shell.sendline(pw)
 		for command in commands:
