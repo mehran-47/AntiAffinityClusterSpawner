@@ -3,7 +3,7 @@
 	"anti_affinity_groups":["testAntiAffinityServerGrp_0"],
 	"vm_configs": [
 					{
-						"hostname": "vm1",
+						"hostname": "node1",
 						"openStackVMname":"AF_VM_1",
 						"groupname":"testAntiAffinityServerGrp_0",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
@@ -16,7 +16,7 @@
 						]
 					},
 					{
-						"hostname": "vm2",
+						"hostname": "node2",
 						"openStackVMname":"AF_VM_2",
 						"groupname":"testAntiAffinityServerGrp_0",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
@@ -29,7 +29,7 @@
 						]
 					},
 					{
-						"hostname": "vm3",
+						"hostname": "node3",
 						"openStackVMname":"AF_VM_3",
 						"groupname":"testAntiAffinityServerGrp_0",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
