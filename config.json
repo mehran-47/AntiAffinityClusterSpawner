@@ -13,7 +13,7 @@
 						"slot_id": "1",
 						"node_type":"controller",
 						"default_commands": [	
-							"echo magic123 | sudo -S service opensafd start"
+							"# echo magic123 | sudo -S service opensafd start"
 						]
 					},
 					{
@@ -27,7 +27,7 @@
 						"slot_id": "2",
 						"node_type":"controller",
 						"default_commands": [	
-							"echo magic123 | sudo -S service opensafd start"
+							"# echo magic123 | sudo -S service opensafd start"
 						]
 					},
 					{
@@ -41,7 +41,7 @@
 						"slot_id": "3",
 						"node_type":"payload",
 						"default_commands": [	
-							"echo magic123 | sudo -S service opensafd start"
+							"# echo magic123 | sudo -S service opensafd start"
 						]
 					},
 					{
@@ -55,7 +55,7 @@
 						"slot_id": "4",
 						"node_type":"payload",
 						"default_commands": [	
-							"echo magic123 | sudo -S service opensafd start"
+							"# echo magic123 | sudo -S service opensafd start"
 						]
 					}
 				]
