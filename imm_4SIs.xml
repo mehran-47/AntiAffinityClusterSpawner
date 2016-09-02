@@ -7076,7 +7076,7 @@ to ensure that default global values in the implementation are also changed acco
     </object>
 	<!-- Node 3 (end) -->
 	<!-- Node 4 (start) -->
-    <object class="SaAmfNodeSwBundle">
+	    <object class="SaAmfNodeSwBundle">
         <dn>safInstalledSwBundle=safSmfBundle=Ericsson-TSP,safAmfNode=PL-4,safAmfCluster=myAmfCluster</dn>
         <attr>
             <name>saAmfNodeSwBundlePathPrefix</name>
@@ -7220,7 +7220,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
     </object>
     <object class="SaAmfCompCsType">
-        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-2HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-3HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
     </object>
 	<!-- Node 4 (end) -->
     <!-- SUs (end) -->
