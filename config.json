@@ -13,7 +13,6 @@
 						"slot_id": "1",
 						"node_type":"controller",
 						"default_commands": [
-							"sleep 2",
 							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
 							"echo magic123 | sudo -S python3 -m lttngAnalyses.destroy_and_clean",
 							"echo magic123 | sudo -S python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
@@ -31,7 +30,6 @@
 						"slot_id": "2",
 						"node_type":"controller",
 						"default_commands": [
-							"sleep 2",
 							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
 							"echo magic123 | sudo -S python3 -m lttngAnalyses.destroy_and_clean",
 							"echo magic123 | sudo -S python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
@@ -49,7 +47,6 @@
 						"slot_id": "3",
 						"node_type":"payload",
 						"default_commands": [
-							"sleep 2",
 							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
 							"echo magic123 | sudo -S python3 -m lttngAnalyses.destroy_and_clean",
 							"echo magic123 | sudo -S python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
@@ -67,7 +64,6 @@
 						"slot_id": "4",
 						"node_type":"payload",
 						"default_commands": [
-							"sleep 2",
 							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
 							"echo magic123 | sudo -S python3 -m lttngAnalyses.destroy_and_clean",
 							"echo magic123 | sudo -S python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
