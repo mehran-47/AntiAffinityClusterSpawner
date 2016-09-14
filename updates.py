@@ -35,7 +35,7 @@ class updates():
 		commandsList = ['#!/bin/bash'] + commandsList
 		with open('/etc/init.d/default_startups', 'w+') as fw: fw.write('\n'.join(commandsList))
 		call('chmod +x /etc/init.d/default_startups'.split(' '))
-		call('update-rc.d default_startups defaults'.split(' '))
+		call('update-rc.d default_startups defaults 99'.split(' '))
 
 	def replace_imm(self):
 		call('mv /etc/opensaf/imm.xml /etc/opensaf/imm.xml.bkp'.split(' '))
