@@ -106,19 +106,18 @@ def second_pass(vms):
 			aVMConfig['username'], \
 			vms.get_floating_ip_of(aVMConfig['openStackVMname']), \
 			aVMConfig['password'], \
-			['echo ' + aVMConfig['password'] + ' | sudo -S service default_startups start'] )
+			['echo ' + aVMConfig['password'] + ' | sudo -S service default_startups start', 'exit'] )
 
 if __name__=='__main__':
 	if os.path.exists(os.getcwd()+'/config.json'):
 		with open('config.json', 'r') as f:
 			mainConfig = json.loads(f.read())	
 		vms = VMSpawner(mainConfig['floating_ip_pool'])		
-		'''
 		for anAntiAffinityGroup in mainConfig['anti_affinity_groups']:
 			if not vms.server_group_exists(anAntiAffinityGroup): 
 				call(['nova', 'server-group-create', anAntiAffinityGroup, 'anti-affinity'])
 		num = int(sys.argv[1]) if sys.argv[1:] else len(mainConfig['vm_configs'])		
 		vms.spawn_vms(num, vms.get_last_spawned_vm_index(), mainConfig['vm_configs'])
-		'''
+		print('beginnning second pass...')
 		second_pass(vms)
 
