@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from pexpect import spawn
 from subprocess import Popen, PIPE, call
 from threading import Thread

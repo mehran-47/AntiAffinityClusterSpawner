@@ -1,9 +1,8 @@
-#!/usr/bin/env python
 from vm_spawner import VMSpawner
-import glob, json
+import glob, json, os
 
 def second_pass(vms):
-	for configPath in glob.glob('./vm_config_*'):
+	for configPath in sorted(glob.glob('./vm_config_*')):
 		with open(configPath, 'r') as f: aVMConfig = json.loads(f.read())
 		vms.execute_commands_at( \
 			aVMConfig['username'], \
