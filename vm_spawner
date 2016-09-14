@@ -100,7 +100,8 @@ class VMSpawner():
 			time.sleep(1)
 
 def second_pass(vms):
-	for aVMConfig in glob.glob('./vm_config_*'):
+	for configPath in glob.glob('./vm_config_*'):
+		with open(configPath, 'r') as f: aVMConfig = json.loads(f.read())
 		vms.execute_commands_at( \
 			aVMConfig['username'], \
 			vms.get_floating_ip_of(aVMConfig['openStackVMname']), \
