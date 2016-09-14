@@ -2,7 +2,7 @@
 from pexpect import spawn
 from subprocess import Popen, PIPE, call
 from threading import Thread
-import sys, time, json, os, re
+import sys, time, json, os, re, glob
 
 
 class VMSpawner():
@@ -99,17 +99,19 @@ class VMSpawner():
 			Thread(target=vms.boot_with_snapshot, args=(vmConfigs[i], 'vm_config_'+str(i)+'.json')).start()
 			time.sleep(1)
 
-
-def second_pass(vms, mainConfig):
-	pass
-
+def second_pass(vms):
+	for aVMConfig in glob.glob('./vm_config_*'):
+		vms.execute_commands_at( \
+			aVMConfig['username'], \
+			vms.get_floating_ip_of(aVMConfig['openStackVMname']), \
+			aVMConfig['password'], \
+			['echo ' + aVMConfig['password'] + ' | sudo -S service default_startups start'] )
 
 if __name__=='__main__':
 	if os.path.exists(os.getcwd()+'/config.json'):
 		with open('config.json', 'r') as f:
 			mainConfig = json.loads(f.read())	
-		vms = VMSpawner(mainConfig['floating_ip_pool'])
-		vms.get_floating_ip_of('AF_VM_3')
+		vms = VMSpawner(mainConfig['floating_ip_pool'])		
 		'''
 		for anAntiAffinityGroup in mainConfig['anti_affinity_groups']:
 			if not vms.server_group_exists(anAntiAffinityGroup): 
@@ -117,4 +119,5 @@ if __name__=='__main__':
 		num = int(sys.argv[1]) if sys.argv[1:] else len(mainConfig['vm_configs'])		
 		vms.spawn_vms(num, vms.get_last_spawned_vm_index(), mainConfig['vm_configs'])
 		'''
+		second_pass(vms)
 
