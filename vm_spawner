@@ -29,6 +29,16 @@ class VMSpawner():
 		command = Popen(['nova','list'], stdout=PIPE)
 		outputList = [line for line in command.stdout]
 		return [entry.split('|')[2].strip() for entry in outputList[3:-1]]
+
+	def get_floating_ip_of(self, vmname):
+		vmnames = self.get_vm_names()
+		if vmname in vmnames:
+			command = Popen(['nova','list'], stdout=PIPE)
+			outputList = [line for line in command.stdout]
+			entry = outputList[3:-1][vmnames.index(vmname)]
+			return entry.split('|')[6].rsplit(',')[1].strip()
+		else:
+			return None
 			
 	def boot_with_snapshot(self, aVMConfig, configDumpFile, timeout=300):
 		snapshot, vmname, antiAffinityGroupName, flavor, username, pw =\
@@ -89,13 +99,22 @@ class VMSpawner():
 			Thread(target=vms.boot_with_snapshot, args=(vmConfigs[i], 'vm_config_'+str(i)+'.json')).start()
 			time.sleep(1)
 
+
+def second_pass(vms, mainConfig):
+	pass
+
+
 if __name__=='__main__':
 	if os.path.exists(os.getcwd()+'/config.json'):
 		with open('config.json', 'r') as f:
 			mainConfig = json.loads(f.read())	
 		vms = VMSpawner(mainConfig['floating_ip_pool'])
+		vms.get_floating_ip_of('AF_VM_3')
+		'''
 		for anAntiAffinityGroup in mainConfig['anti_affinity_groups']:
 			if not vms.server_group_exists(anAntiAffinityGroup): 
 				call(['nova', 'server-group-create', anAntiAffinityGroup, 'anti-affinity'])
 		num = int(sys.argv[1]) if sys.argv[1:] else len(mainConfig['vm_configs'])		
 		vms.spawn_vms(num, vms.get_last_spawned_vm_index(), mainConfig['vm_configs'])
+		'''
+
