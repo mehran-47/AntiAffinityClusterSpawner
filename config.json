@@ -54,6 +54,23 @@
 						]
 					},
 					{
+						"hostname": "node4",
+						"openStackVMname":"AF_VM_4",
+						"groupname":"AntiAffinityServerGrp_1",
+						"source_snapshot":"AntiAffinityVMsnapshot_1",
+						"username":"node1",
+						"password":"magic123",
+						"flavor":"2",
+						"slot_id": "4",
+						"node_type":"payload",
+						"default_commands": [
+							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
+							"python3 -m lttngAnalyses.destroy_and_clean",
+							"python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
+							"echo magic123 | sudo -S service opensafd start"
+						]
+					},
+					{
 						"hostname": "node5",
 						"openStackVMname":"AF_VM_5",
 						"groupname":"AntiAffinityServerGrp_0",
@@ -90,7 +107,7 @@
 					{
 						"hostname": "node7",
 						"openStackVMname":"AF_VM_7",
-						"groupname":"AntiAffinityServerGrp_1",
+						"groupname":"AntiAffinityServerGrp_0",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
 						"username":"node1",
 						"password":"magic123",
@@ -103,24 +120,7 @@
 							"python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
 							"echo magic123 | sudo -S service opensafd start"
 						]
-					},
-					{
-						"hostname": "node4",
-						"openStackVMname":"AF_VM_4",
-						"groupname":"AntiAffinityServerGrp_0",
-						"source_snapshot":"AntiAffinityVMsnapshot_1",
-						"username":"node1",
-						"password":"magic123",
-						"flavor":"2",
-						"slot_id": "4",
-						"node_type":"payload",
-						"default_commands": [
-							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
-							"python3 -m lttngAnalyses.destroy_and_clean",
-							"python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
-							"echo magic123 | sudo -S service opensafd start"
-						]
-					},
+					},					
 					{
 						"hostname": "node8",
 						"openStackVMname":"AF_VM_8",
