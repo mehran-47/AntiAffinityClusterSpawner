@@ -22,7 +22,7 @@
 					{
 						"hostname": "node2",
 						"openStackVMname":"AF_VM_2",
-						"groupname":"AntiAffinityServerGrp_0",
+						"groupname":"AntiAffinityServerGrp_1",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
 						"username":"node1",
 						"password":"magic123",
@@ -56,7 +56,7 @@
 					{
 						"hostname": "node5",
 						"openStackVMname":"AF_VM_5",
-						"groupname":"AntiAffinityServerGrp_1",
+						"groupname":"AntiAffinityServerGrp_0",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
 						"username":"node1",
 						"password":"magic123",
