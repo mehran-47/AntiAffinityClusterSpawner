@@ -2372,7 +2372,7 @@ to ensure that default global values in the implementation are also changed acco
 			<flag>SA_MULTI_VALUE</flag>
 		</attr>
 	</class>
-		<!-- for EE starts -->
+	<!-- for EE starts -->
 	<class name="SaSGBuff">
 	    <category>SA_CONFIG</category>
 	    <rdn>
@@ -2402,7 +2402,7 @@ to ensure that default global values in the implementation are also changed acco
 	      <flag>SA_INITIALIZED</flag>
 	    </attr>
     </class>
-    <!-- for EE ends -->
+    <!-- for EE ends -->	
 	<class name="SaSmfCampaign">
 		<category>SA_CONFIG</category>
 		<rdn>
@@ -2703,7 +2703,6 @@ to ensure that default global values in the implementation are also changed acco
 			<flag>SA_WRITABLE</flag>
 		</attr>
 	</class>
-
 	<object class="SaAmfAppBaseType">
 		<dn>safAppType=OpenSafApplicationType</dn>
 	</object>
@@ -4216,6 +4215,66 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfSI">
+		<dn>safSi=NoRed5,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfSvcType</name>
+			<value>safVersion=4.0.0,safSvcType=NoRed-OpenSAF</value>
+		</attr>
+		<attr>
+			<name>saAmfSIProtectedbySG</name>
+			<value>safSg=NoRed,safApp=OpenSAF</value>
+		</attr>
+		<attr>
+			<name>saAmfSIRank</name>
+			<value>3</value>
+		</attr>
+	</object>
+	<object class="SaAmfSI">
+		<dn>safSi=NoRed6,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfSvcType</name>
+			<value>safVersion=4.0.0,safSvcType=NoRed-OpenSAF</value>
+		</attr>
+		<attr>
+			<name>saAmfSIProtectedbySG</name>
+			<value>safSg=NoRed,safApp=OpenSAF</value>
+		</attr>
+		<attr>
+			<name>saAmfSIRank</name>
+			<value>3</value>
+		</attr>
+	</object>
+	<object class="SaAmfSI">
+		<dn>safSi=NoRed7,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfSvcType</name>
+			<value>safVersion=4.0.0,safSvcType=NoRed-OpenSAF</value>
+		</attr>
+		<attr>
+			<name>saAmfSIProtectedbySG</name>
+			<value>safSg=NoRed,safApp=OpenSAF</value>
+		</attr>
+		<attr>
+			<name>saAmfSIRank</name>
+			<value>3</value>
+		</attr>
+	</object>
+	<object class="SaAmfSI">
+		<dn>safSi=NoRed8,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfSvcType</name>
+			<value>safVersion=4.0.0,safSvcType=NoRed-OpenSAF</value>
+		</attr>
+		<attr>
+			<name>saAmfSIProtectedbySG</name>
+			<value>safSg=NoRed,safApp=OpenSAF</value>
+		</attr>
+		<attr>
+			<name>saAmfSIRank</name>
+			<value>3</value>
+		</attr>
+	</object>
+	<object class="SaAmfSI">
 		<dn>safSi=SC-2N,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfSvcType</name>
@@ -4317,7 +4376,7 @@ to ensure that default global values in the implementation are also changed acco
 			<name>saClmNodeLockCallbackTimeout</name>
 			<value>50000000000</value>
 		</attr>
-	</object>	
+	</object>
 	<object class="SaImmMngt">
 		<dn>safRdn=immManagement,safApp=safImmService</dn>
 		<attr>
@@ -4423,6 +4482,34 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfCSI">
+		<dn>safCsi=AMFWDOG,safSi=NoRed5,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=AMFWDOG-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=AMFWDOG,safSi=NoRed6,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=AMFWDOG-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=AMFWDOG,safSi=NoRed7,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=AMFWDOG-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=AMFWDOG,safSi=NoRed8,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=AMFWDOG-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
 		<dn>safCsi=CLM,safSi=SC-2N,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCSType</name>
@@ -4462,6 +4549,34 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfCSI">
+		<dn>safCsi=CLMNA,safSi=NoRed5,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=CLMNA-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=CLMNA,safSi=NoRed6,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=CLMNA-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=CLMNA,safSi=NoRed7,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=CLMNA-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=CLMNA,safSi=NoRed8,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=CLMNA-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
 		<dn>safCsi=CPD,safSi=SC-2N,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCSType</name>
@@ -4495,6 +4610,34 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfCSI">
 		<dn>safCsi=CPND,safSi=NoRed4,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=CPND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=CPND,safSi=NoRed5,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=CPND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=CPND,safSi=NoRed6,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=CPND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=CPND,safSi=NoRed7,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=CPND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=CPND,safSi=NoRed8,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCSType</name>
 			<value>safVersion=4.0.0,safCSType=CPND-OpenSAF</value>
@@ -4558,6 +4701,34 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfCSI">
+		<dn>safCsi=GLND,safSi=NoRed5,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=GLND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=GLND,safSi=NoRed6,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=GLND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=GLND,safSi=NoRed7,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=GLND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=GLND,safSi=NoRed8,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=GLND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
 		<dn>safCsi=IMMD,safSi=SC-2N,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCSType</name>
@@ -4587,6 +4758,34 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfCSI">
 		<dn>safCsi=IMMND,safSi=NoRed4,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=IMMND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=IMMND,safSi=NoRed5,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=IMMND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=IMMND,safSi=NoRed6,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=IMMND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=IMMND,safSi=NoRed7,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=IMMND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=IMMND,safSi=NoRed8,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCSType</name>
 			<value>safVersion=4.0.0,safCSType=IMMND-OpenSAF</value>
@@ -4643,6 +4842,34 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfCSI">
+		<dn>safCsi=MQND,safSi=NoRed5,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=MQND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=MQND,safSi=NoRed6,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=MQND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=MQND,safSi=NoRed7,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=MQND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=MQND,safSi=NoRed8,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=MQND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
 		<dn>safCsi=NTF,safSi=SC-2N,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCSType</name>
@@ -4690,6 +4917,34 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfCSI">
 		<dn>safCsi=SMFND,safSi=NoRed4,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=SMFND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=SMFND,safSi=NoRed5,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=SMFND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=SMFND,safSi=NoRed6,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=SMFND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=SMFND,safSi=NoRed7,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSType</name>
+			<value>safVersion=4.0.0,safCSType=SMFND-OpenSAF</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSI">
+		<dn>safCsi=SMFND,safSi=NoRed8,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCSType</name>
 			<value>safVersion=4.0.0,safCSType=SMFND-OpenSAF</value>
@@ -5034,6 +5289,34 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfNodeSwBundle">
+		<dn>safInstalledSwBundle=safSmfBundle=OpenSAF,safAmfNode=PL-5,safAmfCluster=myAmfCluster</dn>
+		<attr>
+			<name>saAmfNodeSwBundlePathPrefix</name>
+			<value>/usr/local/lib/opensaf/clc-cli</value>
+		</attr>
+	</object>
+	<object class="SaAmfNodeSwBundle">
+		<dn>safInstalledSwBundle=safSmfBundle=OpenSAF,safAmfNode=PL-6,safAmfCluster=myAmfCluster</dn>
+		<attr>
+			<name>saAmfNodeSwBundlePathPrefix</name>
+			<value>/usr/local/lib/opensaf/clc-cli</value>
+		</attr>
+	</object>
+	<object class="SaAmfNodeSwBundle">
+		<dn>safInstalledSwBundle=safSmfBundle=OpenSAF,safAmfNode=PL-7,safAmfCluster=myAmfCluster</dn>
+		<attr>
+			<name>saAmfNodeSwBundlePathPrefix</name>
+			<value>/usr/local/lib/opensaf/clc-cli</value>
+		</attr>
+	</object>
+	<object class="SaAmfNodeSwBundle">
+		<dn>safInstalledSwBundle=safSmfBundle=OpenSAF,safAmfNode=PL-8,safAmfCluster=myAmfCluster</dn>
+		<attr>
+			<name>saAmfNodeSwBundlePathPrefix</name>
+			<value>/usr/local/lib/opensaf/clc-cli</value>
+		</attr>
+	</object>
+	<object class="SaAmfNodeSwBundle">
 		<dn>safInstalledSwBundle=safSmfBundle=OpenSAF,safAmfNode=SC-1,safAmfCluster=myAmfCluster</dn>
 		<attr>
 			<name>saAmfNodeSwBundlePathPrefix</name>
@@ -5071,6 +5354,66 @@ to ensure that default global values in the implementation are also changed acco
 		<attr>
 			<name>saAmfSUHostNodeOrNodeGroup</name>
 			<value>safAmfNode=PL-4,safAmfCluster=myAmfCluster</value>
+		</attr>
+		<attr>
+			<name>saAmfSUFailover</name>
+			<value>1</value>
+		</attr>
+	</object>
+	<object class="SaAmfSU">
+		<dn>safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfSUType</name>
+			<value>safVersion=4.0.0,safSuType=OpenSafSuTypeND</value>
+		</attr>
+		<attr>
+			<name>saAmfSUHostNodeOrNodeGroup</name>
+			<value>safAmfNode=PL-5,safAmfCluster=myAmfCluster</value>
+		</attr>
+		<attr>
+			<name>saAmfSUFailover</name>
+			<value>1</value>
+		</attr>
+	</object>
+	<object class="SaAmfSU">
+		<dn>safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfSUType</name>
+			<value>safVersion=4.0.0,safSuType=OpenSafSuTypeND</value>
+		</attr>
+		<attr>
+			<name>saAmfSUHostNodeOrNodeGroup</name>
+			<value>safAmfNode=PL-6,safAmfCluster=myAmfCluster</value>
+		</attr>
+		<attr>
+			<name>saAmfSUFailover</name>
+			<value>1</value>
+		</attr>
+	</object>
+	<object class="SaAmfSU">
+		<dn>safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfSUType</name>
+			<value>safVersion=4.0.0,safSuType=OpenSafSuTypeND</value>
+		</attr>
+		<attr>
+			<name>saAmfSUHostNodeOrNodeGroup</name>
+			<value>safAmfNode=PL-7,safAmfCluster=myAmfCluster</value>
+		</attr>
+		<attr>
+			<name>saAmfSUFailover</name>
+			<value>1</value>
+		</attr>
+	</object>
+	<object class="SaAmfSU">
+		<dn>safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfSUType</name>
+			<value>safVersion=4.0.0,safSuType=OpenSafSuTypeND</value>
+		</attr>
+		<attr>
+			<name>saAmfSUHostNodeOrNodeGroup</name>
+			<value>safAmfNode=PL-8,safAmfCluster=myAmfCluster</value>
 		</attr>
 		<attr>
 			<name>saAmfSUFailover</name>
@@ -5262,10 +5605,54 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfCSIAttribute">
+		<dn>safCsiAttr=Attr1,safCsi=GLND,safSi=NoRed5,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSIAttriValue</name>
+			<value>val1</value>
+			<value>val2</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSIAttribute">
+		<dn>safCsiAttr=Attr1,safCsi=GLND,safSi=NoRed6,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSIAttriValue</name>
+			<value>val1</value>
+			<value>val2</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSIAttribute">
+		<dn>safCsiAttr=Attr1,safCsi=GLND,safSi=NoRed7,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSIAttriValue</name>
+			<value>val1</value>
+			<value>val2</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSIAttribute">
+		<dn>safCsiAttr=Attr1,safCsi=GLND,safSi=NoRed8,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCSIAttriValue</name>
+			<value>val1</value>
+			<value>val2</value>
+		</attr>
+	</object>
+	<object class="SaAmfCSIAttribute">
 		<dn>safCsiAttr=Attr2,safCsi=GLND,safSi=NoRed3,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCSIAttribute">
 		<dn>safCsiAttr=Attr2,safCsi=GLND,safSi=NoRed4,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCSIAttribute">
+		<dn>safCsiAttr=Attr2,safCsi=GLND,safSi=NoRed5,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCSIAttribute">
+		<dn>safCsiAttr=Attr2,safCsi=GLND,safSi=NoRed6,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCSIAttribute">
+		<dn>safCsiAttr=Attr2,safCsi=GLND,safSi=NoRed7,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCSIAttribute">
+		<dn>safCsiAttr=Attr2,safCsi=GLND,safSi=NoRed8,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfComp">
 		<dn>safComp=AMFWDOG,safSu=PL-3,safSg=NoRed,safApp=OpenSAF</dn>
@@ -5276,6 +5663,34 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfComp">
 		<dn>safComp=AMFWDOG,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeAMFWDOG</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=AMFWDOG,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeAMFWDOG</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=AMFWDOG,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeAMFWDOG</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=AMFWDOG,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeAMFWDOG</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=AMFWDOG,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCompType</name>
 			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeAMFWDOG</value>
@@ -5324,6 +5739,34 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfComp">
+		<dn>safComp=CLMNA,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeCLMNA</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=CLMNA,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeCLMNA</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=CLMNA,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeCLMNA</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=CLMNA,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeCLMNA</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
 		<dn>safComp=CLMNA,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCompType</name>
@@ -5360,6 +5803,34 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfComp">
 		<dn>safComp=CPND,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeCPND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=CPND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeCPND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=CPND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeCPND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=CPND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeCPND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=CPND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCompType</name>
 			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeCPND</value>
@@ -5436,6 +5907,34 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfComp">
+		<dn>safComp=GLND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeGLND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=GLND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeGLND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=GLND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeGLND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=GLND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeGLND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
 		<dn>safComp=GLND,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCompType</name>
@@ -5472,6 +5971,34 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfComp">
 		<dn>safComp=IMMND,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeIMMND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=IMMND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeIMMND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=IMMND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeIMMND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=IMMND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeIMMND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=IMMND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCompType</name>
 			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeIMMND</value>
@@ -5528,6 +6055,34 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfComp">
 		<dn>safComp=MQND,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeMQND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=MQND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeMQND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=MQND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeMQND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=MQND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeMQND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=MQND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCompType</name>
 			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeMQND</value>
@@ -5604,6 +6159,34 @@ to ensure that default global values in the implementation are also changed acco
 		</attr>
 	</object>
 	<object class="SaAmfComp">
+		<dn>safComp=SMFND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeSMFND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=SMFND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeSMFND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=SMFND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeSMFND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
+		<dn>safComp=SMFND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
+		<attr>
+			<name>saAmfCompType</name>
+			<value>safVersion=4.0.0,safCompType=OpenSafCompTypeSMFND</value>
+		</attr>
+	</object>
+	<object class="SaAmfComp">
 		<dn>safComp=SMFND,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
 		<attr>
 			<name>saAmfCompType</name>
@@ -5624,6 +6207,18 @@ to ensure that default global values in the implementation are also changed acco
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=AMFWDOG-OpenSAF,safComp=AMFWDOG,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=AMFWDOG-OpenSAF,safComp=AMFWDOG,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=AMFWDOG-OpenSAF,safComp=AMFWDOG,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=AMFWDOG-OpenSAF,safComp=AMFWDOG,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=AMFWDOG-OpenSAF,safComp=AMFWDOG,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=AMFWDOG-OpenSAF,safComp=AMFWDOG,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
@@ -5642,6 +6237,18 @@ to ensure that default global values in the implementation are also changed acco
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CLMNA-OpenSAF,safComp=CLMNA,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CLMNA-OpenSAF,safComp=CLMNA,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CLMNA-OpenSAF,safComp=CLMNA,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CLMNA-OpenSAF,safComp=CLMNA,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CLMNA-OpenSAF,safComp=CLMNA,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CLMNA-OpenSAF,safComp=CLMNA,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
@@ -5658,6 +6265,18 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CPND-OpenSAF,safComp=CPND,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CPND-OpenSAF,safComp=CPND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CPND-OpenSAF,safComp=CPND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CPND-OpenSAF,safComp=CPND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CPND-OpenSAF,safComp=CPND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=CPND-OpenSAF,safComp=CPND,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
@@ -5690,6 +6309,18 @@ to ensure that default global values in the implementation are also changed acco
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=GLND-OpenSAF,safComp=GLND,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=GLND-OpenSAF,safComp=GLND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=GLND-OpenSAF,safComp=GLND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=GLND-OpenSAF,safComp=GLND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=GLND-OpenSAF,safComp=GLND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=GLND-OpenSAF,safComp=GLND,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
@@ -5706,6 +6337,18 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=IMMND-OpenSAF,safComp=IMMND,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=IMMND-OpenSAF,safComp=IMMND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=IMMND-OpenSAF,safComp=IMMND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=IMMND-OpenSAF,safComp=IMMND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=IMMND-OpenSAF,safComp=IMMND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=IMMND-OpenSAF,safComp=IMMND,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
@@ -5730,6 +6373,18 @@ to ensure that default global values in the implementation are also changed acco
 	</object>
 	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=MQND-OpenSAF,safComp=MQND,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=MQND-OpenSAF,safComp=MQND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=MQND-OpenSAF,safComp=MQND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=MQND-OpenSAF,safComp=MQND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=MQND-OpenSAF,safComp=MQND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=MQND-OpenSAF,safComp=MQND,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
@@ -5762,6 +6417,18 @@ to ensure that default global values in the implementation are also changed acco
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=SMFND-OpenSAF,safComp=SMFND,safSu=PL-4,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=SMFND-OpenSAF,safComp=SMFND,safSu=PL-5,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=SMFND-OpenSAF,safComp=SMFND,safSu=PL-6,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=SMFND-OpenSAF,safComp=SMFND,safSu=PL-7,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
+		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=SMFND-OpenSAF,safComp=SMFND,safSu=PL-8,safSg=NoRed,safApp=OpenSAF</dn>
+	</object>
+	<object class="SaAmfCompCsType">
 		<dn>safSupportedCsType=safVersion=4.0.0\,safCSType=SMFND-OpenSAF,safComp=SMFND,safSu=SC-1,safSg=NoRed,safApp=OpenSAF</dn>
 	</object>
 	<object class="SaAmfCompCsType">
@@ -5789,6 +6456,7 @@ to ensure that default global values in the implementation are also changed acco
 			<value>5000000000</value>
 		</attr>
 	</object>
+
 	<!-- ################################################# VLC starts ################################################ -->
 	<object class="SaAmfAppBaseType">
 		<dn>safAppType=AmfDemo1</dn>
