@@ -1,11 +1,11 @@
 {
-	"floating_ip_pool":["192.168.205.132", "192.168.205.133", "192.168.205.134", "192.168.205.135"],
-	"anti_affinity_groups":["testAntiAffinityServerGrp_0"],
+	"floating_ip_pool":["192.168.205.132", "192.168.205.133", "192.168.205.134", "192.168.205.135","192.168.205.136", "192.168.205.137", "192.168.205.138", "192.168.205.139"],
+	"anti_affinity_groups":["AntiAffinityServerGrp_0","AntiAffinityServerGrp_1"],
 	"vm_configs": [
 					{
 						"hostname": "node1",
 						"openStackVMname":"AF_VM_1",
-						"groupname":"testAntiAffinityServerGrp_0",
+						"groupname":"AntiAffinityServerGrp_0",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
 						"username":"node1",
 						"password":"magic123",
@@ -22,7 +22,7 @@
 					{
 						"hostname": "node2",
 						"openStackVMname":"AF_VM_2",
-						"groupname":"testAntiAffinityServerGrp_0",
+						"groupname":"AntiAffinityServerGrp_0",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
 						"username":"node1",
 						"password":"magic123",
@@ -39,7 +39,7 @@
 					{
 						"hostname": "node3",
 						"openStackVMname":"AF_VM_3",
-						"groupname":"testAntiAffinityServerGrp_0",
+						"groupname":"AntiAffinityServerGrp_0",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
 						"username":"node1",
 						"password":"magic123",
@@ -54,14 +54,82 @@
 						]
 					},
 					{
+						"hostname": "node5",
+						"openStackVMname":"AF_VM_5",
+						"groupname":"AntiAffinityServerGrp_1",
+						"source_snapshot":"AntiAffinityVMsnapshot_1",
+						"username":"node1",
+						"password":"magic123",
+						"flavor":"2",
+						"slot_id": "5",
+						"node_type":"payload",
+						"default_commands": [
+							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
+							"python3 -m lttngAnalyses.destroy_and_clean",
+							"python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
+							"echo magic123 | sudo -S service opensafd start"
+						]
+					},
+					{
+						"hostname": "node6",
+						"openStackVMname":"AF_VM_6",
+						"groupname":"AntiAffinityServerGrp_1",
+						"source_snapshot":"AntiAffinityVMsnapshot_1",
+						"username":"node1",
+						"password":"magic123",
+						"flavor":"2",
+						"slot_id": "6",
+						"node_type":"payload",
+						"default_commands": [
+							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
+							"python3 -m lttngAnalyses.destroy_and_clean",
+							"python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
+							"echo magic123 | sudo -S service opensafd start"
+						]
+					},
+					{
+						"hostname": "node7",
+						"openStackVMname":"AF_VM_7",
+						"groupname":"AntiAffinityServerGrp_1",
+						"source_snapshot":"AntiAffinityVMsnapshot_1",
+						"username":"node1",
+						"password":"magic123",
+						"flavor":"2",
+						"slot_id": "7",
+						"node_type":"payload",
+						"default_commands": [
+							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
+							"python3 -m lttngAnalyses.destroy_and_clean",
+							"python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
+							"echo magic123 | sudo -S service opensafd start"
+						]
+					},
+					{
 						"hostname": "node4",
 						"openStackVMname":"AF_VM_4",
-						"groupname":"testAntiAffinityServerGrp_0",
+						"groupname":"AntiAffinityServerGrp_0",
 						"source_snapshot":"AntiAffinityVMsnapshot_1",
 						"username":"node1",
 						"password":"magic123",
 						"flavor":"2",
 						"slot_id": "4",
+						"node_type":"payload",
+						"default_commands": [
+							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",
+							"python3 -m lttngAnalyses.destroy_and_clean",
+							"python3 -m lttngAnalyses.daemon_controller_client 192.168.10.7 6666 &",
+							"echo magic123 | sudo -S service opensafd start"
+						]
+					},
+					{
+						"hostname": "node8",
+						"openStackVMname":"AF_VM_8",
+						"groupname":"AntiAffinityServerGrp_1",
+						"source_snapshot":"AntiAffinityVMsnapshot_1",
+						"username":"node1",
+						"password":"magic123",
+						"flavor":"2",
+						"slot_id": "8",
 						"node_type":"payload",
 						"default_commands": [
 							"cd /home/node1/Downloads/lttngAnalysesForOpenSAF/",

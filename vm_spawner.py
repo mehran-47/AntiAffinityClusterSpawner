@@ -83,7 +83,7 @@ class VMSpawner():
 		self.send_files(user, ip, pw, \
 			['/home/node1/updates.py', \
 			'/home/node1/'+configFile, \
-			'/home/node1/imm_4SIs.xml'])
+			'/home/node1/imm_2+2SIs.xml'])
 		self.execute_commands_at(user, ip, pw, 
 			['echo '+ pw + ' | sudo -S python3 /home/node1/updates.py '+configFile])
 

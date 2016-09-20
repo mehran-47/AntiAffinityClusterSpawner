@@ -39,7 +39,7 @@ class updates():
 
 	def replace_imm(self):
 		call('mv /etc/opensaf/imm.xml /etc/opensaf/imm.xml.bkp'.split(' '))
-		call('cp /home/node1/imm_4SIs.xml /etc/opensaf/imm.xml'.split(' '))
+		call('cp /home/node1/imm_2+2SIs.xml /etc/opensaf/imm.xml'.split(' '))
 
 def finalize(timeout=3):
 	time.sleep(timeout)
