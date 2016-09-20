@@ -7276,7 +7276,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
         <attr>
             <name>saAmfSIPrefActiveAssignments</name>
-            <value>3</value>
+            <value>4</value>
         </attr>        
         <attr>
             <name>saAmfSIProtectedbySG</name>
@@ -7291,7 +7291,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
         <attr>
             <name>saAmfSIPrefActiveAssignments</name>
-            <value>3</value>
+            <value>4</value>
         </attr>        
         <attr>
             <name>saAmfSIProtectedbySG</name>
@@ -7306,7 +7306,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
         <attr>
             <name>saAmfSIPrefActiveAssignments</name>
-            <value>3</value>
+            <value>4</value>
         </attr>        
         <attr>
             <name>saAmfSIProtectedbySG</name>
@@ -7321,7 +7321,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
         <attr>
             <name>saAmfSIPrefActiveAssignments</name>
-            <value>3</value>
+            <value>4</value>
         </attr>        
         <attr>
             <name>saAmfSIProtectedbySG</name>
