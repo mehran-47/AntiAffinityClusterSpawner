@@ -4290,6 +4290,34 @@ to ensure that default global values in the implementation are also changed acco
 			<value>50000000000</value>
 		</attr>
 	</object>
+	<object class="SaClmNode">
+		<dn>safNode=node5,safCluster=myClmCluster</dn>
+		<attr>
+			<name>saClmNodeLockCallbackTimeout</name>
+			<value>50000000000</value>
+		</attr>
+	</object>
+	<object class="SaClmNode">
+		<dn>safNode=node6,safCluster=myClmCluster</dn>
+		<attr>
+			<name>saClmNodeLockCallbackTimeout</name>
+			<value>50000000000</value>
+		</attr>
+	</object>
+	<object class="SaClmNode">
+		<dn>safNode=node7,safCluster=myClmCluster</dn>
+		<attr>
+			<name>saClmNodeLockCallbackTimeout</name>
+			<value>50000000000</value>
+		</attr>
+	</object>
+	<object class="SaClmNode">
+		<dn>safNode=node8,safCluster=myClmCluster</dn>
+		<attr>
+			<name>saClmNodeLockCallbackTimeout</name>
+			<value>50000000000</value>
+		</attr>
+	</object>	
 	<object class="SaImmMngt">
 		<dn>safRdn=immManagement,safApp=safImmService</dn>
 		<attr>
