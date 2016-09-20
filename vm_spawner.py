@@ -1,7 +1,7 @@
-from pexpect import spawn
+from pexpect import spawn, exceptions as pexpect_excepts
 from subprocess import Popen, PIPE, call
 from threading import Thread
-import sys, time, json, os, re, glob
+import sys, time, json, os, re, glob, random
 
 
 class VMSpawner():
@@ -53,8 +53,15 @@ class VMSpawner():
 			print('%s created successfully' %(vmname))
 			floatingIp = self.floatingIpPool.pop(0)
 			call(['nova', 'add-floating-ip', vmname, floatingIp])
-			time.sleep(1)
-			self.push_updates(username, floatingIp, pw, configDumpFile)
+			updates_failed = True
+			while updates_failed:
+				try:
+					time.sleep(random.randrange(1,5))
+					self.push_updates(username, floatingIp, pw, configDumpFile)
+					updates_failed = False
+				except pexpect_excepts.EOF:
+					print('Pushing updates failed for %s' %(vmname))
+					updates_failed = True
 		else:
 			print('%s is taking longer than usual (~5 minutes) to boot; consider troubleshooting. Customization of %s is halted' %(vmname, vmname))
 
