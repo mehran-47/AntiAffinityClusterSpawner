@@ -6814,7 +6814,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>    
     </object>
     <object class="SaAmfSU">
-        <dn>safSu=Service_unit-1HTTP_SU,safSg=Service_group-00HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safSu=Service_unit-0HTTP_SU,safSg=Service_group-02HTTP_server,safApp=Application-0HTTP_server</dn>
         <attr>
             <name>saAmfSUType</name>
             <value>safVersion=4.0.0,safSuType=HTTP_SU_type</value>
@@ -6829,7 +6829,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
     </object>
     <object class="SaAmfComp">
-        <dn>safComp=Component-1HTTP,safSu=Service_unit-1HTTP_SU,safSg=Service_group-00HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safComp=Component-1HTTP,safSu=Service_unit-0HTTP_SU,safSg=Service_group-02HTTP_server,safApp=Application-0HTTP_server</dn>
         <attr>
             <name>saAmfCompType</name>
             <value>safVersion=4.0.0,safCompType=HTTP_component_type</value>
@@ -6845,11 +6845,11 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
     </object>
     <object class="SaAmfCompCsType">
-        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-1HTTP_SU,safSg=Service_group-00HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-0HTTP_SU,safSg=Service_group-02HTTP_server,safApp=Application-0HTTP_server</dn>
     </object>
 
     <object class="SaAmfSU">
-        <dn>safSu=Service_unit-1HTTP_SU,safSg=Service_group-01HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safSu=Service_unit-0HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
         <attr>
             <name>saAmfSUType</name>
             <value>safVersion=4.0.0,safSuType=HTTP_SU_type</value>
@@ -6864,7 +6864,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
     </object>
     <object class="SaAmfComp">
-        <dn>safComp=Component-1HTTP,safSu=Service_unit-1HTTP_SU,safSg=Service_group-01HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safComp=Component-1HTTP,safSu=Service_unit-0HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
         <attr>
             <name>saAmfCompType</name>
             <value>safVersion=4.0.0,safCompType=HTTP_component_type</value>
@@ -6880,7 +6880,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
     </object>
     <object class="SaAmfCompCsType">
-        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-1HTTP_SU,safSg=Service_group-01HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-0HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
     </object>
     <!-- Node 2 (end) -->
     <!-- Node 3 (start) -->
@@ -7048,7 +7048,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>    
     </object>
     <object class="SaAmfSU">
-        <dn>safSu=Service_unit-0HTTP_SU,safSg=Service_group-02HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safSu=Service_unit-1HTTP_SU,safSg=Service_group-00HTTP_server,safApp=Application-0HTTP_server</dn>
         <attr>
             <name>saAmfSUType</name>
             <value>safVersion=4.0.0,safSuType=HTTP_SU_type</value>
@@ -7063,7 +7063,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
     </object>
     <object class="SaAmfComp">
-        <dn>safComp=Component-1HTTP,safSu=Service_unit-0HTTP_SU,safSg=Service_group-02HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safComp=Component-1HTTP,safSu=Service_unit-1HTTP_SU,safSg=Service_group-00HTTP_server,safApp=Application-0HTTP_server</dn>
         <attr>
             <name>saAmfCompType</name>
             <value>safVersion=4.0.0,safCompType=HTTP_component_type</value>
@@ -7079,11 +7079,11 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
     </object>
     <object class="SaAmfCompCsType">
-        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-0HTTP_SU,safSg=Service_group-02HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-1HTTP_SU,safSg=Service_group-00HTTP_server,safApp=Application-0HTTP_server</dn>
     </object>
 
     <object class="SaAmfSU">
-        <dn>safSu=Service_unit-0HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safSu=Service_unit-1HTTP_SU,safSg=Service_group-01HTTP_server,safApp=Application-0HTTP_server</dn>
         <attr>
             <name>saAmfSUType</name>
             <value>safVersion=4.0.0,safSuType=HTTP_SU_type</value>
@@ -7098,7 +7098,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
     </object>
     <object class="SaAmfComp">
-        <dn>safComp=Component-1HTTP,safSu=Service_unit-0HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safComp=Component-1HTTP,safSu=Service_unit-1HTTP_SU,safSg=Service_group-01HTTP_server,safApp=Application-0HTTP_server</dn>
         <attr>
             <name>saAmfCompType</name>
             <value>safVersion=4.0.0,safCompType=HTTP_component_type</value>
@@ -7114,7 +7114,7 @@ to ensure that default global values in the implementation are also changed acco
         </attr>
     </object>
     <object class="SaAmfCompCsType">
-        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-0HTTP_SU,safSg=Service_group-03HTTP_server,safApp=Application-0HTTP_server</dn>
+        <dn>safSupportedCsType=safVersion=4.0.0\,safCSType=HTTP_component_service_type,safComp=Component-1HTTP,safSu=Service_unit-1HTTP_SU,safSg=Service_group-01HTTP_server,safApp=Application-0HTTP_server</dn>
     </object>
 	<!-- Node 5 (end) -->
 	<!-- Node 6 (start) -->
