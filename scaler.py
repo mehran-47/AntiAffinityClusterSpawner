@@ -1,5 +1,6 @@
 from pexpect import spawn
 from sys import argv
+from Threading import Thread
 
 def execute_commands_at(user, ip, pw, commands):
 	print('ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '+user+'@'+ip)
@@ -12,13 +13,22 @@ def execute_commands_at(user, ip, pw, commands):
 		print(line)
 
 def scale_out_vm():
+	print('Spawning new VMs...')
 	commands = ['source mehran-admin-nova',\
 	'cd anti_affinity_demo/AntiAffinityClusterSpawner/',\
 	'python vm_spawner.py 2',\
 	'exit']
-	print('Scaling out VMs...')
 	execute_commands_at('magic', '192.168.205.42', 'magic123', commands)
 
+def increase_assignment_for(SI):
+	print('Scaling out')
+	commands=['cd /home/node1/Downloads/lttngAnalysesForOpenSAF/',\
+	'python -m EE.main '+SI+' 1 1']
+	execute_commands_at('node1', '192.168.10.8', 'magic123', commands)
+
+
 if __name__ == '__main__':
-	scale_out_vm()
-	#if argv[1:]:
+	if argv[1:]:
+		Thread(target=scale_out_vm).start()
+		increase_assignment_for(argv[1])
+			
