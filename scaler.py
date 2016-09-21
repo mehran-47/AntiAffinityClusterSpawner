@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from pexpect import spawn
 from sys import argv
 
@@ -10,7 +9,7 @@ def execute_commands_at(user, ip, pw, commands):
 	for command in commands:
 		child_shell.sendline(command)
 	for line in child_shell:
-		pass
+		print(line)
 
 def scale_out_vm():
 	commands = ['source mehran-admin-nova',\
@@ -18,7 +17,7 @@ def scale_out_vm():
 	'python vm_spawner.py 2',\
 	'exit']
 	print('Scaling out VMs...')
-	execute_commands_at('node1', '192.168.205.42', 'magic123', commands)
+	execute_commands_at('magic', '192.168.205.42', 'magic123', commands)
 
 if __name__ == '__main__':
 	scale_out_vm()
