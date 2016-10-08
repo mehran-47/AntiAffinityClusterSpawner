@@ -1,6 +1,6 @@
 from pexpect import spawn
 from sys import argv
-from Threading import Thread
+from threading import Thread
 
 def execute_commands_at(user, ip, pw, commands):
 	print('ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '+user+'@'+ip)
@@ -23,12 +23,13 @@ def scale_out_vm():
 def increase_assignment_for(SI):
 	print('Scaling out')
 	commands=['cd /home/node1/Downloads/lttngAnalysesForOpenSAF/',\
-	'python -m EE.main '+SI+' 1 1']
+	'python -m EE.main '+SI+' 1 1',
+	'exit']
 	execute_commands_at('node1', '192.168.10.8', 'magic123', commands)
 
 
 if __name__ == '__main__':
 	if argv[1:]:
-		Thread(target=scale_out_vm).start()
+		scale_out_vm()
 		increase_assignment_for(argv[1])
 			
