@@ -1,0 +1,52 @@
+listen si0 0.0.0.0:8000
+        mode http
+        stats enable
+        stats uri /haproxy?stats
+        stats realm Strictly\ Private
+        balance roundrobin
+        option httpclose
+        option forwardfor
+        server node1 192.168.10.8:8080 check
+        server node3 192.168.10.10:8080 check
+        server node5 192.168.10.19:8080 check
+        server node7 192.168.10.21:8080 check
+
+listen si1 0.0.0.0:8001
+        mode http
+        stats enable
+        stats uri /haproxy?stats
+        stats realm Strictly\ Private
+        balance roundrobin
+        option httpclose
+        option forwardfor
+        server node1 192.168.10.8:8081 check
+        server node3 192.168.10.10:8081 check
+        server node5 192.168.10.19:8081 check
+        server node7 192.168.10.21:8081 check
+
+listen si2 0.0.0.0:8002
+        mode http
+        stats enable
+        stats uri /haproxy?stats
+        stats realm Strictly\ Private
+        balance roundrobin
+        option httpclose
+        option forwardfor
+        server node1 192.168.10.9:8080 check
+        server node3 192.168.10.18:8080 check
+        server node5 192.168.10.20:8080 check
+        server node7 192.168.10.22:8080 check
+
+listen si3 0.0.0.0:8003
+        mode http
+        stats enable
+        stats uri /haproxy?stats
+        stats realm Strictly\ Private
+        balance roundrobin
+        option httpclose
+        option forwardfor
+        server node1 192.168.10.9:8081 check
+        server node3 192.168.10.18:8081 check
+        server node5 192.168.10.20:8081 check
+        server node7 192.168.10.22:8081 check
+
