@@ -1,0 +1,27 @@
+Prelude:
+#command to convert vmdk image to qcow2:
+qemu-img convert -f vmdk -O qcow2 source_image.vmdk destination_image.qcow2
+#command to create snapshot from an existing image
+nova image-create <instance_name> <image_name>
+#command to upload qcow2 image in glance:
+glance image-create --name VM_snapshot_name_in_glance --file destination_image.qcow2 --disk-format qcow2 --container-format bare
+#link to access 'horizon' dashboard:
+http://192.168.205.42/horizon/project/instances/
+#link to access 'FUEL' dashboard:
+http://192.168.205.41:8000/#cluster/1/nodes
+--------------------------------------------------------------------------------------------------------------------------------------------------
+1. Before creating/spawning a new VM, make sure the 'instances' volume is unmounted from all the hypervisors. (e.g. SSH to each node and execute "umount 192.168.205.42:/var/lib/nova/instances")
+2. For spawning a new VM, execute the following from the controller node (hostname: node-10, IP:192.168.205.42)	
+	"nova boot --flavor 2 --image e2d1303b-0b1f-41ce-a15e-5545a0437d6f new_elasticity_HTTP_3"
+where --flavor 2 refers to a micro instance, e2d1...7d6f is the uuid of the image stored at /var/lib/nova/instances of the head node and new_elasticity_HTTP_3 is the VM name.
+3. Once the VM is created, move the storage of the newly created VM to the networked filesystem in the controller node. For example, if the VM is created in node-6, with ID 0b18...823 , there should be a new directory created in /var/lib/nova/instances/0b18...823 . Move/copy this directory to 192.168.205.42:/var/lib/nova/instances.
+4. If the controller node (node10) is rebooted, make sure the IPTable DROP rule is not disabled, network mounting will not work. 
+	a. iptables -L --line-numbers (to list all the rules fetched from FUEL)
+	b. iptables -D INPUT 35 (block all connections to all ports except FTP and SSH)
+5. In the 'bridge' VM (uuid: 8769b3af-5f81-4c65-b7d4-9aef8daf0fb6, name: ubuntu-demo-client), start_teamviewer execution does not necessarily start teamviewer. You will need to execute all of its commands manually to start teamviewer.
+6. Add startup by using the command (did to fix http-component not starting by default)
+	6.1: First, put the script (start_osaf in this example) in '/etc/init.d', then issue the following command
+	6.2: Use 'sudo' to start opensaf rather than simply putting 'service opensaf start'. Put the following statement in 'start_osaf' and make 'start_osaf' executable.
+		e.g.: echo magic123 | sudo -S service opensafd start
+	6.3 Update startup defaults by issuing the following command:
+		update-rc.d start_osaf defaults
